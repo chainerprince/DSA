@@ -4,7 +4,7 @@ int binarySearch(int *arr, int n, int x){
 	int lo,hi;
 	lo=0;
 	hi=n-1;
-	while(lo<hi){
+	while(lo<=hi){
         int mid;
         if(arr[hi] != arr[lo]){
         mid= lo + (x - arr[lo]) *(hi - lo)/(arr[hi] - arr[lo]);
