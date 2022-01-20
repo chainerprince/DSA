@@ -5,7 +5,13 @@ int binarySearch(int *arr, int n, int x){
 	lo=0;
 	hi=n-1;
 	while(lo<hi){
-		int mid= lo + (x - arr[lo]) *(hi - lo)/(arr[hi] - arr[lo]);
+        int mid;
+        if(arr[hi] != arr[lo]){
+        mid= lo + (x - arr[lo]) *(hi - lo)/(arr[hi] - arr[lo]);
+        }else{
+            return -1;
+        }
+		
 		if(x==arr[mid])
 				return mid;
 		else if(arr[mid]>x)		
@@ -17,7 +23,7 @@ int binarySearch(int *arr, int n, int x){
 }
 int main()
 {
-	int array[]={1,1,1,1,1};
+	int array[]={1,2,3,4};
 	int size=sizeof(array)/sizeof(array[0]);
 	int key=1;
 	cout<<binarySearch(array,size,key);
