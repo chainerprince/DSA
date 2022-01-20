@@ -7,7 +7,7 @@ using namespace std;
 int binarySearch(int *arr,int size,int key){
 int start,end;
 start = 0;
-end =0;
+end =size-1;
 
 for(int i = start; i< end;i++){
     int mid = (start + end)/2;
@@ -16,7 +16,7 @@ for(int i = start; i< end;i++){
     }else if(arr[mid] > key){
         end = mid - 1;
     }
-    else if(arr[mid] < key){
+    else{
         start = mid + 1;
     }
 }
