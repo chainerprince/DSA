@@ -17,7 +17,7 @@ int binarySearch(int *arr, int n, int x){
 }
 int main()
 {
-	int array[]={1,2,3,4,5};
+	int array[]={1,1,1,1,1};
 	int size=sizeof(array)/sizeof(array[0]);
 	int key=1;
 	cout<<binarySearch(array,size,key);
