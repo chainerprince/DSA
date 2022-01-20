@@ -19,7 +19,7 @@ int main()
 {
 	int array[]={1,3,4,5,7,27};
 	int size=sizeof(array)/sizeof(array[0]);
-	int key=3;
+	int key=5;
 	cout<<binarySearch(array,size,key);
 }
 
