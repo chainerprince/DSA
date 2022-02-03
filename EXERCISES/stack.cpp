@@ -52,26 +52,44 @@ void display(){
 
 int main(){
     int option;
+    int exit;
 
-    cout << "chose 1: to push " << endl << "choose 2: to peek" << endl << "choose 3: to pop ";
+    cout << "chose 1: to push " << endl
+         << "choose 2: to peek " << endl
+         << "choose 3: to pop "
+         << "choose 4: to display " << endl
+         << "choose 5: to exit " << endl;
     cin >> option;
-
-    if(option == 1){
+    // cout << "The exit works";
+    
+push(400);
+while(exit != 5){
+    if (option == 1)
+    {
         push(200);
-    }else if(option == 2){
+        cout << "Press 5 to exit or any number to continue ";
+        cin >> exit;
+        continue;
+    }
+    else if (option == 2)
+    {
         peek();
-    }else if(option == 3){
+    }
+    else if (option == 3)
+    {
         pop();
     }
-    else{
+    else if (option == 4)
+    {
+        display();
+    }
+    else
+    {
         cout << "Invalid option but your current stack is: ";
         display();
     }
-    
-    
-    
-    
-   
+}
+
 
     return 0;
 }
