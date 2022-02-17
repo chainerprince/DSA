@@ -18,22 +18,24 @@ int isMeera(int *arr,int size){
     int primeFound = 0;
     int zeroFound = 0;
     for(int i=0;i<size;i++){
-       if(isPrime(i)){
+       if(isPrime(arr[i])){
              primeFound = 1;
        }
        if(arr[i] == 0){
            zeroFound = 1;
        }
-         
+
+      
     }
-    if(zeroFound && primeFound){
+    if ((zeroFound && primeFound) || (!zeroFound && !primeFound))
+    {
         return 1;
     }
     return 0;
 }
 
 int main(){
-    int arr[] = {2, 2, 3, 3, 3};
+    int arr[] = {6,10,7,1,0};
     int size = sizeof(arr) / sizeof(arr[0]);
     int result = isMeera(arr, size);
     if (result)
