@@ -19,22 +19,28 @@ void BubbleSort(int *arr,int size){
 }
 
 int isTripleArray(int *arr,int size){
-    for(int i=0;i< size; i++){
-        if (arr[i] == arr[i + 1] == arr[i + 2])
-        {
-            return 1;
+    int isTriple = 0;
+    for(int i=0;i< size; i+=2){
+        if(i>size ){
+            break;
         }
-        i+=2;
+        
+        if ((arr[i] == arr[i + 1]) && (arr[i] == arr[i + 2]))
+        {
+          isTriple = 1;
+        }
+        
     }
-    return  0;
+    return isTriple;
   
 }
 
 
 int main(){
-    int arr[] = {2, 2, 3, 3, 3};
+    int arr[] = {2, 2, 2, 3, 3, 3,2};
     int size = sizeof(arr) / sizeof(arr[0]);
-    BubbleSort(arr,size);
+    // BubbleSort(arr,size);
+    
     int result = isTripleArray(arr,size);
     if (result)
     {
